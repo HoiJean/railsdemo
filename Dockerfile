@@ -18,6 +18,8 @@ RUN gem update --system && gem install bundler
 
 WORKDIR /usr/src/app
 
+RUN mv ./.env.example .env
+
 ENTRYPOINT ["./entrypoint.sh"]
 
 EXPOSE 3000
