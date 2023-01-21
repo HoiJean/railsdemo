@@ -38,6 +38,6 @@ ARG RENDER
 ARG DATABASE_URL
 RUN if [ -z "$RENDER" ]; then echo "var is unset"; else bin/rails db:migrate; fi
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
